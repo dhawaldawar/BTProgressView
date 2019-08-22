@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BTProgressViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0c2-uz-2eT" customClass="BTProgressView" customModule="BTProgressView">
+                                <rect key="frame" x="35.5" y="144" width="343" height="200"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.38039215686274508" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="J0V-vw-vbj"/>
+                                    <constraint firstAttribute="height" constant="200" id="M9G-F3-7QY"/>
+                                    <constraint firstAttribute="width" constant="343" id="gcU-pw-I3f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Iz9-Sx-o5Z">
+                                <rect key="frame" x="18" y="443" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FuE-uP-hmH"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.87058823529999996" green="0.3803921569" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xo8-SV-tov"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mo-uf-3yo">
+                                <rect key="frame" x="16" y="414" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CAb-Za-9e6"/>
+                                    <constraint firstAttribute="height" constant="21" id="hVm-kV-tLx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1x-Jc-HR9">
+                                <rect key="frame" x="156" y="515" width="102" height="40"/>
+                                <color key="backgroundColor" red="0.87058823529999996" green="0.3803921569" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="0XW-xY-30S"/>
+                                    <constraint firstAttribute="height" constant="40" id="zfZ-xX-gDv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Failed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnFailed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9B-S2-FlU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8mo-uf-3yo" firstAttribute="top" secondItem="0c2-uz-2eT" secondAttribute="bottom" constant="70" id="1Qc-ac-leX"/>
+                            <constraint firstItem="k1x-Jc-HR9" firstAttribute="top" secondItem="Iz9-Sx-o5Z" secondAttribute="bottom" constant="42" id="E5R-7v-KVM"/>
+                            <constraint firstItem="Iz9-Sx-o5Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KzD-fj-fKx"/>
+                            <constraint firstItem="8mo-uf-3yo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RtT-LS-Ihb"/>
+                            <constraint firstItem="0c2-uz-2eT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="c9i-rf-MUu"/>
+                            <constraint firstItem="k1x-Jc-HR9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iaG-2h-05V"/>
+                            <constraint firstItem="Iz9-Sx-o5Z" firstAttribute="top" secondItem="8mo-uf-3yo" secondAttribute="bottom" constant="8" id="uk7-rp-LmG"/>
+                            <constraint firstItem="0c2-uz-2eT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7A-S6-MT3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iz9-Sx-o5Z" secondAttribute="trailing" constant="20" id="x4D-PC-eet"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="0c2-uz-2eT" id="Kbw-RS-2PA"/>
+                        <outlet property="slider" destination="Iz9-Sx-o5Z" id="dPR-bv-yfm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-916" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
