@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/DialogBox.svg?style=flat)](http://cocoapods.org/pods/DialogBox)
 [![Platform](https://img.shields.io/cocoapods/p/DialogBox.svg?style=flat)](http://cocoapods.org/pods/DialogBox)
 
-This framework provides a way to build spring based progress view by writing view lines of code with easy theme customization.
+This framework provides a way to build spring based progress bar animation by writing view lines of code with easy theme customization.
 
 ## Example
 
