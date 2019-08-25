@@ -8,12 +8,13 @@ This framework provides a way to build spring based progress view by writing vie
 
 ## Example
 
-<img src="example.gif" width="300" height="534"/>
+<img src="example.gif" width="368" height="502"/>
 
 ```swift
 let progressView = BTProgressView()
 // Add autolayout constraints.
 view.addSubview(progressView)
+progressView.load()
 ```
 
 Following customization options available:
